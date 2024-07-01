@@ -2,7 +2,7 @@ name: main workflow
 on: push
 jobs:
   build:
-    runs-on: Ubantu-latest
+    runs-on: ubuntu:latest
     container: gradle:6-jdk11
     steps:
       - name: clone down repository
