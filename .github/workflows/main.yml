@@ -2,9 +2,9 @@ name: main workflow
 on: push
 jobs:
   build:
-  runs-on: Ubantu-latest
-  container: gradle:6-jdk11
-  steps:
-      name: clone down repository
-      uses: actions/checkout@v4
-      run: ci/ build-app.sh
+    runs-on: Ubantu-latest
+    container: gradle:6-jdk11
+    steps:
+      - name: clone down repository
+        uses: actions/checkout@v4
+      - run: ci/ build-app.sh
