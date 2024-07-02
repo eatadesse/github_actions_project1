@@ -14,3 +14,4 @@ jobs:
         
       - name: run build script  
         run: ./ci/build-app.sh
+        shell: bash
