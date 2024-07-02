@@ -9,8 +9,14 @@ jobs:
       - name: clone down repository
         uses: actions/checkout@v4
 
+      - name: list files and permissions before
+        run: ls -1 ci/
+
       - name: set execute permission on the script
         run: chmod +x ci/build-app.sh
+        
+      - name: list files and permissions after
+        run: ls -1 ci/
 
       - name: run build script  
         run: ci/ build-app.sh
