@@ -1,5 +1,6 @@
 name: main workflow
-on: push
+on: 
+  push:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -7,4 +8,9 @@ jobs:
     steps:
       - name: clone down repository
         uses: actions/checkout@v4
+
+      - name: set execute permission on the script
+        run: chmod +x ci/build-app.sh
+
+      - name: run build script  
       - run: ci/ build-app.sh
