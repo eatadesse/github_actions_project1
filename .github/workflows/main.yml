@@ -14,4 +14,7 @@ jobs:
         
       - name: run build script  
         run: ./ci/build-app.sh
+
+      - name: Test
+        run: ci/unit-test-app.sh
         shell: bash
