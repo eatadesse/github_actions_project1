@@ -62,7 +62,3 @@ jobs:
         run: bash ci/build-docker.sh
       - name: push docker
         run: bash ci/push-docker.sh
-##      - name: build & push image
-##         run: |
-##         echo "${{ secrets.DOCKER_PWD}}" |
-##         docker imagae build -t docker push eatadesse/project_1
